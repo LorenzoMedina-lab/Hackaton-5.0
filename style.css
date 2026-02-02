@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajusta la posición del contenido dentro de la pantalla */
+    min-height: 100vh;  
+     /*Ajusta el color del fondo de la pagina  */
+    background: #151f28;
+}
+/* Le doy estilo al contenedor de inicio de sesion */
+.square{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square i{
+    position: absolute;
+    inset: 0;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+.square i:nth-child(1){
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+.square i:nth-child(2){
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+.square i:nth-child(3){
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate2 10s linear infinite
+}
+
+.square:hover i{
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Aqui le doy formato al formulario inicio */
+.inicio{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+/* Aqui cambio el tipo de serigrafia del sub titulo Inicio */
+.inicio h2{
+    font-size: 2em;
+    color:#fff
+}
+/* Aqui le doy estilo a los inputs del formulario */
+.inicio .inputBx{
+    position: relative;
+    width: 100%;
+}
+.inicio .inputBx input{
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    font-size: 1.2em;
+    border-radius: 400;
+    outline: none;
+    color: #fff;
+}
+/* Aqui le doy estilo al boton de iniciar sesion */
+.inicio .inputBx input[type="submit"]{
+    width: 100%;
+    background: #0078ff;
+    background: linear-gradient(45deg,#ff357a,#fff172);
+    border: none;
+    cursor:pointer
+}
+.inicio .inputBx input ::placeholder{
+    color: rgba(255,255,255,0.75);
+}
+/* Aqui le doy estilo al boton olvidaste contraseña */
+.inicio .links{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.inicio .links a{
+    color: #fff;
+    text-decoration: none;
+}
